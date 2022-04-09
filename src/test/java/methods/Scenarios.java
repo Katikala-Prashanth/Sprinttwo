@@ -15,7 +15,7 @@ public class Scenarios extends Baseclass {
 
 	@Given("User Launch Chrome browser")
 	public void user_Launch_Chrome_browser() {
-		Sp = new Signup(driver);
+		// Sp = new Signup(driver);
 		lp = new Login(driver);
 
 		WebDriverManager.chromedriver().setup();
@@ -31,6 +31,7 @@ public class Scenarios extends Baseclass {
 
 	@When("User enters Email as {string} and Password as {string}")
 	public void user_enters_Email_as_and_Password_as(String email, String pwd) {
+		Sp = new Signup(driver);
 		Sp.EnterCredential(email, pwd);
 	}
 
